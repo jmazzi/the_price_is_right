@@ -18,6 +18,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'github_api', '~> 0.4.2'
   gem.add_dependency 'retryable-rb', '~> 1.1.0'
   gem.add_dependency 'awesome_print', '~> 1.0.2'
+  gem.add_dependency 'terminal-table', '~> 1.4.4'
 
   gem.add_development_dependency 'rake', '~> 0.9.2.2'
 end

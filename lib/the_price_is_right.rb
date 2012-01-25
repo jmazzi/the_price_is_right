@@ -7,6 +7,14 @@ begin
   require File.join(ENV['HOME'], '.the_price_is_right')
 rescue LoadError
   puts "Please create a ~/.the_price_is_right.rb file with your Github config"
+  puts "\nExample:\n
+    Github.configure do |config|
+      config.oauth_token   = 'token'
+      config.basic_auth    = 'username:password'
+    end
+
+    See https://github.com/peter-murach/github for more info
+  "
   exit
 end
 

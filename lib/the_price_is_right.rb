@@ -10,6 +10,9 @@ rescue LoadError
   puts "\nExample:\n
     Github.configure do |config|
       config.oauth_token   = 'token'
+
+      # OR
+
       config.basic_auth    = 'username:password'
     end
 

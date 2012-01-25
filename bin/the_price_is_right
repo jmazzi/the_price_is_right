@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'the_price_is_right'
+
+if ARGV[0].nil? || ARGV[0].empty?
+  puts "Usage the_price_is_right <username> [max_repos]"
+  exit(255)
+end
+
+if ARGV[1].nil? || ARGV[1].empty?
+  max = :max
+else
+  max = ARGV[1].to_i
+end
+
+ap ThePriceIsRight.overview(ARGV[0], max)

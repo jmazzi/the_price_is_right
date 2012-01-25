@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 require 'the_price_is_right'
 
 if ARGV[0].nil? || ARGV[0].empty?
@@ -12,4 +13,4 @@ else
   max = ARGV[1].to_i
 end
 
-ap ThePriceIsRight.overview(ARGV[0], max)
+ThePriceIsRight.overview(ARGV[0], max)

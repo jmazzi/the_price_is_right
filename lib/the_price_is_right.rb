@@ -117,6 +117,7 @@ module ThePriceIsRight
       commits_by_project = commits.inject({}) do |hash, event|
         name = event['repo']['name']
 
+        next unless event.has_key?('payload') && event['payload'].has_key?('commits')
         unless owned.include? name.split('/').last
           hash[name] ||= []
 
@@ -141,6 +142,7 @@ module ThePriceIsRight
       puts table1
 
       table2_head = [:date, :message]
+      commits_by_project ||= []
       commits_by_project.each do |project, info|
         table2 = Terminal::Table.new(
           title:    "Commits to #{project}",
